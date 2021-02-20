@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-02-20T01:34:25.567Z",
+    "end": "2021-02-20T01:34:41.250Z",
+    "duration": 15683,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "71d3976c-b174-4ef9-980c-690f20190d38",
+      "title": "",
+      "fullFile": "cypress\\integration\\SignupFlow\\SignupFlow_NotDutchResident.spec.js",
+      "file": "cypress\\integration\\SignupFlow\\SignupFlow_NotDutchResident.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "47013a26-116d-4704-b985-1a11d8c50ab3",
+          "title": "NegativeScenarios",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "2dcadfbf-ec52-4373-9898-1665e91c70c6",
+              "title": "Signup Flow",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Should show a message if the user is not a Dutch Resident",
+                  "fullTitle": "NegativeScenarios Signup Flow Should show a message if the user is not a Dutch Resident",
+                  "timedOut": null,
+                  "duration": 15490,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.url().should('eq', 'https://vandebron.nl/');\ncy.xpath(\"//button[@onclick='acceptCookies()']\").click(); //Fill form\ncy.xpath(\"//input[@name='submitData.shippingAddress.zipCode']\").scrollIntoView().type('7441').should('have.value', '7441');\ncy.xpath(\"//input[@name='submitData.shippingAddress.number']\").scrollIntoView().type('0604718950').should('have.value', '0604718950');\ncy.xpath(\"//input[@name='submitData.shippingAddress.addition']\").scrollIntoView().type('G').should('have.value', 'G'); //submit form\ncy.xpath(\"//button[@class='Base-sc-11hu4bh-0-button Pressable-xp7e18-0 kjUHle']\").click(); //Validation\ncy.xpath(\"//h2[text()='Waar woon je?']\").should('contain', 'Waar woon je?');\ncy.xpath(\"//p[text()='Vul je postcode en huisnummer in voor een aanbod op maat.']\").should('contain', 'Vul je postcode en huisnummer in voor een aanbod op maat.');",
+                  "err": {
+                    "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button font-size=\"button\" type=\"button\" class=\"Base-sc-11hu4bh-0-button Pressable-xp7e18-0 kjUHle\">...</button>`\n\nis being covered by another element:\n\n`<span class=\"top-bar-text\">Kies vo...</span>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                    "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button font-size=\"button\" type=\"button\" class=\"Base-sc-11hu4bh-0-button Pressable-xp7e18-0 kjUHle\">...</button>`\n\nis being covered by another element:\n\n`<span class=\"top-bar-text\">Kies vo...</span>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://vandebron.nl/__cypress/runner/cypress_runner.js:162656:26)\n    at ensureDescendents (https://vandebron.nl/__cypress/runner/cypress_runner.js:151114:8)\n    at ensureDescendentsAndScroll (https://vandebron.nl/__cypress/runner/cypress_runner.js:151121:14)\n    at ensureElIsNotCovered (https://vandebron.nl/__cypress/runner/cypress_runner.js:151255:5)\n    at runAllChecks (https://vandebron.nl/__cypress/runner/cypress_runner.js:151404:52)\n    at retryActionability (https://vandebron.nl/__cypress/runner/cypress_runner.js:151427:16)\n    at tryCatcher (https://vandebron.nl/__cypress/runner/cypress_runner.js:10765:23)\n    at Function.Promise.attempt.Promise.try (https://vandebron.nl/__cypress/runner/cypress_runner.js:8039:29)\n    at tryFn (https://vandebron.nl/__cypress/runner/cypress_runner.js:167007:21)\n    at whenStable (https://vandebron.nl/__cypress/runner/cypress_runner.js:167045:12)\n    at https://vandebron.nl/__cypress/runner/cypress_runner.js:166540:16\n    at tryCatcher (https://vandebron.nl/__cypress/runner/cypress_runner.js:10765:23)\n    at Promise._settlePromiseFromHandler (https://vandebron.nl/__cypress/runner/cypress_runner.js:8700:31)\n    at Promise._settlePromise (https://vandebron.nl/__cypress/runner/cypress_runner.js:8757:18)\n    at Promise._settlePromise0 (https://vandebron.nl/__cypress/runner/cypress_runner.js:8802:10)\n    at Promise._settlePromises (https://vandebron.nl/__cypress/runner/cypress_runner.js:8882:18)\nFrom Your Spec Code:\n    at Context.eval (https://vandebron.nl/__cypress/tests?p=cypress\\integration\\SignupFlow\\SignupFlow_NotDutchResident.spec.js:115:89)",
+                    "diff": null
+                  },
+                  "uuid": "f8a6c52f-16b7-48bd-ace5-22922843b282",
+                  "parentUUID": "2dcadfbf-ec52-4373-9898-1665e91c70c6",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "f8a6c52f-16b7-48bd-ace5-22922843b282"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 15490,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

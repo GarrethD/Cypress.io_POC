@@ -1,0 +1,27 @@
+{
+    "baseUrl": "https://vandebron.nl",
+
+    "_comment": "Set the default viewport to 1080p for tests going forward. This can be overwritten within our test.json classe",
+    
+    "viewportWidth": 1920,
+    "viewportHeight": 1080,
+
+"reporter": 
+"cypress-multi-reporters",
+    "reporterOptions": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/reports/mocha",
+            "quite": true,
+            "overwrite": true,
+            "html": true,
+            "json": true
+        }
+        
+    }
+    
+    
+}
+
+  
+  
