@@ -59,12 +59,29 @@ export function PostcodeTextBox() {
     return "//div[@class='optionBlock-info-title'][text()='Variabel']";
   }
 
+
+
+
+
+
+  //==================================================================CSS Selectors for comparing and selecting===================================================================
   export function ElectricityUsage() {
-    return "//a[@title='wijzig']/../..//span[@class='Text-module__text-default Text-module__u-font-button-small'][1]";
+    return "//input[\\@id='priceParameters\\.basicEstimate']";
   }
   export function GasUsage() {
-    return "//div[@class='optionBlock-info-title'][text()='Variabel'][2]";
+    return "//input[@id='priceParameters.gasEstimate']";
   }
   export function wijzigButton() {
-    return "//div[@class='optionBlock-info-title'][text()='Variabel']";
+    return "#e2e-edit-usage";
+  }
+
+
+  export function ElectricityUsageTextBox() {
+    return ".EditKnownUsage > :nth-child(1) > .Flex-module__flex-column > .Input__Container-yt9vxy-3 > .Input__StyledInputWrapper-yt9vxy-0";
+  }
+  export function GasUsageTextBox() {
+    return ".EditKnownUsage > :nth-child(2) > .Input__Container-yt9vxy-3 > .Input__StyledInputWrapper-yt9vxy-0";
+  }
+  export function OkButton() {
+    return "//input[@id='priceParameters.gasEstimate']/../../../../../..//span[text()='Ok']";
   }
