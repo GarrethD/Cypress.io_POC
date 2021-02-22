@@ -13,7 +13,7 @@
         },
       // Configuration used to debug Cypress tests
       {
-        "type": "chrome",
+        "type": "pwa-chrome",
         "request": "attach",
         "name": "Attach to Cypress",
         "port": 9222,

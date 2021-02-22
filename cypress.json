@@ -1,27 +1,15 @@
 {
-    "baseUrl": "https://vandebron.nl",
-
-    "_comment": "Set the default viewport to 1080p for tests going forward. This can be overwritten within our test.json classe",
-    
+    "_comment1": "Set the default viewport to 1080p for tests going forward. This can be overwritten within our test.json classe",
     "viewportWidth": 1920,
     "viewportHeight": 1080,
-
-"reporter": 
-"cypress-multi-reporters",
+    "_comment2": "Set bahavior is where cypress will try and scroll the element to before interacting with it.",
+    "scrollBehavior":"center",
+    "reporter": "mochawesome",
     "reporterOptions": {
-        "reporterEnabled": "mochawesome",
-        "mochawesomeReporterOptions": {
-            "reportDir": "cypress/reports/mocha",
-            "quite": true,
-            "overwrite": true,
-            "html": true,
-            "json": true
-        }
-        
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
     }
-    
-    
 }
-
-  
-  
