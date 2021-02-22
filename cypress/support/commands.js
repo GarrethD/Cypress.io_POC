@@ -27,7 +27,7 @@ import * as EnvironmentURL from '../../src/Configs/EnvUrls.json'
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('NavigateToOfferPage', () => {
-
+  scrollBehavior:false
   //Validate new page
   cy.get(SignupPageObjects.WatTypeWoningPageHeader()).should('contain', 'In welk type woning woon je?');
   //action
@@ -58,22 +58,23 @@ Cypress.Commands.add('NavigateToOfferPage', () => {
 Cypress.Commands.add('IsAResident', (PostCode, HuisNummer, Toevoeging) => {
   //Positive testcase to get to 'Jouw persoonlijke aanbod'
   //Fill form
-  
-  cy.get(SignupPageObjects.PostcodeTextBox()).scrollIntoView().type(PostCode).should('have.value', PostCode);
+  scrollBehavior:false
+  cy.get(SignupPageObjects.PostcodeTextBox()).type(PostCode).should('have.value', PostCode);
   cy.scrollTo('center')
-  cy.get(SignupPageObjects.HuisnummerTextBox()).scrollIntoView().type(HuisNummer).should('have.value',HuisNummer);
+  cy.get(SignupPageObjects.HuisnummerTextBox()).type(HuisNummer).should('have.value',HuisNummer);
   cy.scrollTo('center')
-  cy.get(SignupPageObjects.ToevoegingTextBox()).scrollIntoView().type(Toevoeging).should('have.value', Toevoeging);
+  cy.get(SignupPageObjects.ToevoegingTextBox()).type(Toevoeging).should('have.value', Toevoeging);
   cy.scrollTo('center')
-  cy.get(SignupPageObjects.BerekenJeMaandbedragButton()).scrollIntoView().click();
+  cy.get(SignupPageObjects.BerekenJeMaandbedragButton()).click();
 })
 
 Cypress.Commands.add('AcceptCookies', () => {
-
+  scrollBehavior:false
   cy.get(SignupPageObjects.acceptCookies()).click();
 })
 
 Cypress.Commands.add('NavigateAndValidateURL', () => {
+  scrollBehavior:false
   cy.visit(EnvironmentURL.ProdURL);
   cy.url().should('eq', EnvironmentURL.ProdURL);
 

@@ -176,4 +176,12 @@ export function DrieJaarPriceText() {
 export function VariabelPriceText() {
   return '[data-index="2"] > :nth-child(1) > .Switch-module__switch > .Block-module__block > .optionBlock-inner-wrapper > .optionBlock-content-wrapper > .optionBlock-content-price';
 }
+export function ZonnepanelenToolTip() {
+  return '.SolarPanelYieldInput-label > .Icon-module__u-font-color-silver > path';
+}
+export function ZonnepanelenToolTipText() {
+  return '.popover-content';
+}
+
+
 

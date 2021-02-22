@@ -1,18 +1,18 @@
 import * as SignupPageObjects from '../../../src/PageObjects/SignupPO'
+import * as SignupDetails from '../../fixtures/UserSignUpDetails.json'
 
 before(function () {
    cy.NavigateAndValidateURL();
    cy.AcceptCookies();
-
 })
 describe('Feature - Jouw persoonlijke aanbod - “wizig” button functionality', function () {
-   scrollBehavior:false
+
    it('User is on the best Deal Page', function () {
       /*This method incapsulates a bunch of actions taken to get to the 'Jouw persoonlijke aanbod' page.
   //From here we can just call the navigate method to get to the page and then worry about the rest of the tests going forward.
   we can add shortcut methods like login, logout navigation etc.
   */
-      cy.IsAResident();
+ cy.IsAResident('1011bx','1','G');
       cy.NavigateToOfferPage();
    })
    it('User had default values generated based on consumption', function () {
@@ -120,6 +120,16 @@ describe('Feature - Jouw persoonlijke aanbod - “wizig” button functionality'
 
          cy.get(SignupPageObjects.GasEnStroom()).click();
          cy.get(SignupPageObjects.SoortText()).should('contain','Stroom en Gas')
+
+         cy.get(SignupPageObjects.OkButton()).should('contain', 'Ok').click();
+
+      })
+      it('User can click on the tooltip', function () {
+         //Change the value and submit
+         cy.get(SignupPageObjects.wijzigButton()).click();
+         cy.get(SignupPageObjects.VebruikWijzigenLink()).click();
+         cy.get(SignupPageObjects.ZonnepanelenToolTip()).click({force:true})
+         cy.get(SignupPageObjects.ZonnepanelenToolTipText()).should('have.text',SignupDetails.TooltipMessage)
 
          cy.get(SignupPageObjects.OkButton()).should('contain', 'Ok').click();
 

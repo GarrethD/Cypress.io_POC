@@ -4,5 +4,6 @@
   "_comment2": "For this assignment no code was needed to be saved. File created for futre use",
   "id": 8739,
   "name": "Garreth",
-  "email": "GarrethD210Ggmail.com"
+  "email": "GarrethD210Ggmail.com",
+  "TooltipMessage": "De energieopwek van je zonnepanelen kun je terugvinden op je vorige jaarafrekening. Had je afgelopen jaar nog geen zonnepanelen? Vul hier dan 1700 kWh in: de gemiddelde opwek van een huishouden met zonnepanelen."
 }

@@ -1,12 +1,11 @@
 import * as SignupPageObjects from '../../../src/PageObjects/SignupPO'
-
 before(function () {
   cy.NavigateAndValidateURL();
   cy.AcceptCookies();
 
 })
-    describe('Signup Flow',  function ()  {
-      scrollBehavior:false
+    describe('Feature is not Dutch Resident',  function ()  {
+      
         it('Check if the user is a resident', function () {
        //Fill form
        cy.IsAResident('7441','6','GH');

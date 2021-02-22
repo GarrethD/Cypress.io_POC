@@ -1,13 +1,11 @@
 import * as SignupPageObjects from '../../../src/PageObjects/SignupPO'
-
 before(function () {
     cy.NavigateAndValidateURL();
     cy.AcceptCookies();
  
  })
-describe('Feature - Jouw persoonlijke aanbod - “wizig” button functionality', function () {
-
-   scrollBehavior:false
+describe('Feature - [Extra] Validate Price updates after Vebruik wijzigen has been used', function () {
+   
 it('User is on the best Deal Page', function () {
    //Reusable methods to cut out mundain repetitive code writing 
     cy.IsAResident('1011bx','1','G');
