@@ -3,7 +3,9 @@ Cypress is a node based javascript/React testing framework capabile of easy e2e 
 
 # Setup:
 1.Install NodeJs
+
 2.Follow the basic setup guid at https://www.cypress.io/ based on your OS.
+
 3.Insatall VSCode. (Although not needed for running tests, I found that it was very lightweight and easy to hook up to cypress.)
 
 
