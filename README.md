@@ -23,7 +23,7 @@ Currently no CI implementation or configuration files.
 
 
 # Enhancements
-There are a few things I would like to improve on. For starters I would like to remove all hardcoded Variables and add them to structured JSON files for easy iteration and implementation. This will help for scalability and reusability. For this usecase this was not needed
+There are a few things I would like to improve on. For starters I would like to remove all hardcoded Variables and add them to structured JSON files for easy iteration and implementation. This will help for scalability and reusability. For the uscase the framework was used, this was not necessary. 
 
 
 # Thank You
