@@ -18,13 +18,13 @@ There are 2 ways of running tests:
 2. In command line/Terminal we can run the scripts we set up. In this Cypress Example we can use the command *"npm run scripts || npm run posttest"*
    We run "npm run scripts" to run all our spec files. Once that is done, we run "npm run posttest" to combine all reports into a single HTML file for easy viewing.
 
-#Github CI pipeline
+# Github CI pipeline
 Currently no CI implementation or configuration files.
 
 
-#Enhancements
+# Enhancements
 There are a few things I would like to improve on. For starters I would like to remove all hardcoded Variables and add them to structured JSON files for easy iteration and implementation. This will help for scalability and reusability. For this usecase this was not needed
 
 
-#Thank You
+# Thank You
 Thank you for Reading this long Readme. I hope it was informative and gave a lot of info based on the apprach I took on writing RestAssure tests.
