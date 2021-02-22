@@ -1,11 +1,6 @@
 # Cypress.io_POC
 Cypress is a node based javascript/React testing framework capabile of easy e2e testing.
 
-This project is an example of how to setup API tests using BDD approach with Serenity framework
-
-# Project Description:
-Project was set up using Serenity and RestAssured Written in Java with Junit, Cucumber & Maven Project was developed using IntelliJ IDE with the Cucumber plugin
-
 # Setup:
 Install NodeJs
 Follow the basic setup guid at https://www.cypress.io/ based on your OS.
