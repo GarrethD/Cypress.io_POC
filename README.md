@@ -27,4 +27,4 @@ There are a few things I would like to improve on. For starters I would like to 
 
 
 # Thank You
-Thank you for Reading this long Readme. I hope it was informative and gave a lot of info based on the apprach I took on writing RestAssure tests.
+Thank you for Reading this long Readme. I hope it was informative and gave a lot of info based on the apprach I took on writing Cypress tests.
